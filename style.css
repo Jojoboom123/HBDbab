@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7f8e3; /* สีพื้นหลังโทนอบอุ่น */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #5e4444; /* สีตัวอักษรโทนอบอุ่น */
+    flex-direction: column; /* จัดเรียงเนื้อหาเป็นแนวตั้ง */
+}
+
+.container {
+    text-align: center;
+}
+
+.message-container {
+    margin-bottom: 30px;
+}
+
+.floating-message {
+    font-size: 2em;
+    opacity: 0;
+    animation: floatUp 3s ease-out forwards; /* เพิ่ม animation ให้ข้อความ */
+    margin: 10px 0;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#startGameButton {
+    /* CSS เดิมของคุณ */
+    background-color: #e9967a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* ทำให้ margin auto ทำงาน (ถ้าใช้วิธีนี้จัดกลาง) */
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; /* ซ่อนปุ่มโดยตั้งค่าความโปร่งใสเป็น 0 */
+    transition: opacity 1s ease-in-out; /* เพิ่ม Transition สำหรับการค่อยๆ แสดง */
+}
+
+#startGameButton.show {
+    opacity: 1; /* ค่อยๆ แสดงปุ่มโดยเปลี่ยน opacity เป็น 1 */
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: twinkle linear infinite;
+    /* เพิ่มเพื่อทดสอบ */
+    width: 10px;
+    height: 10px;
+    top: 50vh;
+    left: 50vw;
+}
+#startGameButton:hover {
+    background-color: #d47a5e;
+}
+
+#birthdaySong {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}

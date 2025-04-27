@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ของขวัญวันเกิด!</title>
+    <link rel="stylesheet" href="gift.css">
+</head>
+<body>
+    <div class="gift-page-container">
+        <h1>สุขสันต์วันเกิดนะ!</h1>
+        <div class="gift-box-container">
+            <div class="gift-box">
+                <div class="lid"></div>
+                <div class="box"></div>
+                <div class="ribbon"></div>
+            </div>
+            <button id="openGiftButton">เปิดของขวัญ!</button>
+            <div id="gift-reveal" style="display: none;">
+                <img id="finalGiftImage" src="" alt="ของขวัญ">
+                <p id="loveMessage"></p>
+            </div>
+        </div>
+        <div id="floating-images-container">
+        </div>
+        <audio id="birthdaySong" loop>
+            <source src="hbd1.mp3" type="audio/mpeg">
+        </audio>
+
+        </div>
+    <script src="gift.js"></script>
+</body>
+</html>
